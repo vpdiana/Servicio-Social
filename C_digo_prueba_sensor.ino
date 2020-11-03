@@ -1,13 +1,13 @@
 const int BUZZ = 13;
-const int SENSOR = 2;
+const int SENSOR = 3;
 int valor;
 void setup() {
-  pinMode(BUZZ, OUTPUT);
-  pinMode(SENSOR, INPUT);
+  pinMode(BUZZ, OUTPUT); //el buzzer manda un sonido a la salida
+  pinMode(SENSOR, INPUT); //se interpreta la entrada del sensor (deteccion)
 
 }
 
 void loop() {
   valor = digitalRead(SENSOR);
-  digitalWrite(BUZZ, !valor); //si es high lo manda a low y viceversa
+  digitalWrite(BUZZ, !valor); // se niega el valor para que el buzzer suene al detectar movimiento
 }
